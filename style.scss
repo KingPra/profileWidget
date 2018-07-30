@@ -12,6 +12,7 @@ $orange: #ff7400;
   border-radius: 3px;
   box-shadow: 1px 2px 25px rgba(0,0,0,0.3);
   color: $orange;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .center {
@@ -32,52 +33,52 @@ $orange: #ff7400;
   height: 300px;
   text-align: center;
 
-.image {
-  img {
-    position: relative;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin: 38px auto 0 auto;
-    display: block;
-    background: #ccc;
-  }
-
-  .circle-1 {
-    position: absolute;
-    box-sizing: border-box;
-    width: 76px;
-    height: 76px;
-    top: 35px;
-    left: 62px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: orange orange orange transparent;
-    border-radius: 50%;
-    transition: all 1.5s ease-in-out;
-  }
-
-  .circle-2 {
-    @extend .circle-1;
-    top: 33px;
-    left: 60px;
-    width: 80px;
-    height: 80px;
-    border-color: orange transparent orange orange;
-  }
-
-  &:hover {
-    cursor: pointer;
+  .image {
+    img {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin: 38px auto 0 auto;
+      display: block;
+      background: #ccc;
+    }
 
     .circle-1 {
-      transform: rotate(360deg);
+      position: absolute;
+      box-sizing: border-box;
+      width: 76px;
+      height: 76px;
+      top: 35px;
+      left: 62px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: orange orange orange transparent;
+      border-radius: 50%;
+      transition: all 1.5s ease-in-out;
     }
 
     .circle-2 {
-      transform: rotate(-360deg);
+      @extend .circle-1;
+      top: 33px;
+      left: 60px;
+      width: 80px;
+      height: 80px;
+      border-color: orange transparent orange orange;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .circle-1 {
+        transform: rotate(360deg);
+      }
+
+      .circle-2 {
+        transform: rotate(-360deg);
+      }
     }
   }
-}
 }
 
 
@@ -137,9 +138,12 @@ $orange: #ff7400;
 }
 
 .sub-info {
-  display: block
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .detail {
   display: block;
+  font-size: 12px;
 }
